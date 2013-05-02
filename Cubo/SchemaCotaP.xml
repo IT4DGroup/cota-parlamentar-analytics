@@ -1,5 +1,5 @@
 <Schema name="CotaParlamentar">
-  <Dimension type="StandardDimension" visible="true" name="Tempo">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Tempo">
     <Hierarchy name="Tempo" visible="true" hasAll="true" allMemberName="Todos" primaryKey="sk_tempo">
       <Table name="dim_tempo" schema="dw" alias="Tempo">
       </Table>
@@ -11,7 +11,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="TipoDoc">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="TipoDoc">
     <Hierarchy name="TipoDoc" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_tipodoc">
       <Table name="dim_tipodoc" schema="dw" alias="TipoDoc">
       </Table>
@@ -19,7 +19,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="Beneficiario">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Beneficiario">
     <Hierarchy name="Beneficiario" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_beneficiario">
       <Table name="dim_beneficiario" schema="dw" alias="Beneficiario">
       </Table>
@@ -27,7 +27,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="Especificacao">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Especificacao">
     <Hierarchy name="Especificacao" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_especificacao">
       <Table name="dim_especificacao" schema="dw" alias="Especificacao">
       </Table>
@@ -35,7 +35,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="Legislatura">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Legislatura">
     <Hierarchy name="Legislatura" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_legislatura">
       <Table name="dim_legislatura" schema="dw" alias="Legislatura">
       </Table>
@@ -43,7 +43,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="Parlamentar">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Parlamentar">
     <Hierarchy name="Parlamentar" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_parlamentar">
       <Table name="dim_parlamentar" schema="dw" alias="Parlamentar">
       </Table>
@@ -51,7 +51,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="Partido">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Partido">
     <Hierarchy name="Partido" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_partido">
       <Table name="dim_partido" schema="dw" alias="Partido">
       </Table>
@@ -59,7 +59,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="Passageiro">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Passageiro">
     <Hierarchy name="Passageiro" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_passageiro">
       <Table name="dim_passageiro" schema="dw" alias="Passageiro">
       </Table>
@@ -67,7 +67,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="Ressarcimento">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Ressarcimento">
     <Hierarchy name="Ressarcimento" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_ressarcimento">
       <Table name="dim_ressarcimento" schema="dw" alias="Ressarcimento">
       </Table>
@@ -77,7 +77,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="SubCota">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="SubCota">
     <Hierarchy name="SubCota" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_subcota">
       <Table name="dim_subcota" schema="dw" alias="SubCota">
       </Table>
@@ -85,7 +85,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="Trecho">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Trecho">
     <Hierarchy name="Trecho" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_trecho">
       <Table name="dim_trecho" schema="dw" alias="Trecho">
       </Table>
@@ -93,7 +93,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="UF">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="UF">
     <Hierarchy name="UF" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_uf">
       <Table name="dim_uf" schema="dw" alias="UF">
       </Table>
@@ -104,31 +104,31 @@
   <Cube name="CotaP" visible="true" cache="true" enabled="true">
     <Table name="fato_cotap" schema="dw" alias="Fato_CotaP">
     </Table>
-    <DimensionUsage source="Tempo" name="Tempo" visible="true" foreignKey="fk_tempo">
+    <DimensionUsage source="Tempo" name="Tempo" visible="true" foreignKey="fk_tempo" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="TipoDoc" name="TipoDoc" visible="true" foreignKey="fk_tipodoc">
+    <DimensionUsage source="TipoDoc" name="TipoDoc" visible="true" foreignKey="fk_tipodoc" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Beneficiario" name="Beneficiario" visible="true" foreignKey="fk_beneficiario">
+    <DimensionUsage source="Beneficiario" name="Beneficiario" visible="true" foreignKey="fk_beneficiario" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Especificacao" name="Especificacao" visible="true" foreignKey="fk_especificacao">
+    <DimensionUsage source="Especificacao" name="Especificacao" visible="true" foreignKey="fk_especificacao" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Parlamentar" name="Parlamentar" visible="true" foreignKey="fk_parlamentar">
+    <DimensionUsage source="Parlamentar" name="Parlamentar" visible="true" foreignKey="fk_parlamentar" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Partido" name="Partido" visible="true" foreignKey="fk_partido">
+    <DimensionUsage source="Partido" name="Partido" visible="true" foreignKey="fk_partido" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Passageiro" name="Passageiro" visible="true" foreignKey="fk_passageiro">
+    <DimensionUsage source="Passageiro" name="Passageiro" visible="true" foreignKey="fk_passageiro" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="SubCota" name="SubCota" visible="true" foreignKey="fk_subcota">
+    <DimensionUsage source="SubCota" name="SubCota" visible="true" foreignKey="fk_subcota" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Trecho" name="Trecho" visible="true" foreignKey="fk_trecho">
+    <DimensionUsage source="Trecho" name="Trecho" visible="true" foreignKey="fk_trecho" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="UF" name="UF" visible="true" foreignKey="fk_uf">
+    <DimensionUsage source="UF" name="UF" visible="true" foreignKey="fk_uf" highCardinality="false">
     </DimensionUsage>
-    <Measure name="VL_Documento" column="vlrdocumento" datatype="Integer" aggregator="sum" caption="VL_Documento" visible="true">
+    <Measure name="VL_Documento" column="vl_documento" datatype="Integer" aggregator="sum" caption="VL_Documento" visible="true">
     </Measure>
-    <Measure name="VL_Glosa" column="vlrglosa" datatype="Integer" aggregator="sum" caption="VL_Glosa" visible="true">
+    <Measure name="VL_Glosa" column="vl_glosa" datatype="Integer" aggregator="sum" caption="VL_Glosa" visible="true">
     </Measure>
-    <Measure name="VL_Liquido" column="vlrliquido" datatype="Integer" aggregator="sum" caption="VL_Liquido" visible="true">
+    <Measure name="VL_Liquido" column="vl_liquido" datatype="Integer" aggregator="sum" caption="VL_Liquido" visible="true">
     </Measure>
   </Cube>
 </Schema>
