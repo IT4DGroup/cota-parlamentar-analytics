@@ -93,13 +93,13 @@ http:&#47;&#47;rpbouman.blogspot.com&#47;2007&#47;04&#47;kettle-tip-using-java-l
   </notepads>
   <connection>
     <name>dw_cotap</name>
-    <server>192.168.164.11</server>
+    <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
     <database>dw_cotap</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb14af7edf95aac8</password>
+    <password>Encrypted 2be98afc86aa7f2e4fe4df7238fc7ff8b</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>

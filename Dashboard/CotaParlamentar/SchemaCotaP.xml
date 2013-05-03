@@ -1,0 +1,134 @@
+<Schema name="CotaParlamentar">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Tempo">
+    <Hierarchy name="Tempo" visible="true" hasAll="true" allMemberName="Todos" primaryKey="sk_tempo">
+      <Table name="dim_tempo" schema="dw" alias="Tempo">
+      </Table>
+      <Level name="Ano" visible="true" column="ano4" nameColumn="ano4" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Ano">
+      </Level>
+      <Level name="Ano_Trimestre" visible="true" column="ano_trimestre" nameColumn="ano_trimestre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Trimestre">
+      </Level>
+      <Level name="Ano_Mes" visible="true" column="ano_mes_numero" nameColumn="ano_mes_numero" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Mes">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="TipoDoc">
+    <Hierarchy name="TipoDoc" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_tipodoc">
+      <Table name="dim_tipodoc" schema="dw" alias="TipoDoc">
+      </Table>
+      <Level name="TipoDoc" visible="true" column="tx_tipodoc" nameColumn="tx_tipodoc" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="TipoDoc">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Beneficiario">
+    <Hierarchy name="Beneficiario" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_beneficiario">
+      <Table name="dim_beneficiario" schema="dw" alias="Beneficiario">
+      </Table>
+      <Level name="Beneficiario" visible="true" column="tx_nome" nameColumn="tx_nome" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Beneficiario">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Especificacao">
+    <Hierarchy name="Especificacao" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_especificacao">
+      <Table name="dim_especificacao" schema="dw" alias="Especificacao">
+      </Table>
+      <Level name="Especificacao" visible="true" column="tx_descricao" nameColumn="tx_descricao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Especificacao">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Legislatura">
+    <Hierarchy name="Legislatura" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_legislatura">
+      <Table name="dim_legislatura" schema="dw" alias="Legislatura">
+      </Table>
+      <Level name="Legislatura" visible="true" column="cd_legislatura" nameColumn="cd_legislatura" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Legislatura">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Parlamentar">
+    <Hierarchy name="Parlamentar" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_parlamentar">
+      <Table name="dim_parlamentar" schema="dw" alias="Parlamentar">
+      </Table>
+      <Level name="Parlamentar" visible="true" column="tx_nome" nameColumn="tx_nome" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Parlamentar">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Partido">
+    <Hierarchy name="Partido" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_partido">
+      <Table name="dim_partido" schema="dw" alias="Partido">
+      </Table>
+      <Level name="Partido" visible="true" column="sg_partido" nameColumn="sg_partido" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Partido">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Passageiro">
+    <Hierarchy name="Passageiro" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_passageiro">
+      <Table name="dim_passageiro" schema="dw" alias="Passageiro">
+      </Table>
+      <Level name="Passageiro" visible="true" column="tx_nome" nameColumn="tx_nome" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Passageiro">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Ressarcimento">
+    <Hierarchy name="Ressarcimento" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_ressarcimento">
+      <Table name="dim_ressarcimento" schema="dw" alias="Ressarcimento">
+      </Table>
+      <Level name="Lote" visible="true" column="nu_lote" nameColumn="nu_lote" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Lote">
+      </Level>
+      <Level name="Ressarcimento" visible="true" column="nu_ressarcimento" nameColumn="nu_ressarcimento" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Ressarcimento">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="SubCota">
+    <Hierarchy name="SubCota" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_subcota">
+      <Table name="dim_subcota" schema="dw" alias="SubCota">
+      </Table>
+      <Level name="SubCota" visible="true" column="tx_descricao" nameColumn="tx_descricao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="SubCota">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Trecho">
+    <Hierarchy name="Trecho" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_trecho">
+      <Table name="dim_trecho" schema="dw" alias="Trecho">
+      </Table>
+      <Level name="Trecho" visible="true" column="tx_trecho" nameColumn="tx_trecho" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Trecho">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="UF">
+    <Hierarchy name="UF" visible="true" hasAll="true" allMemberName="Todos" primaryKey="pk_uf">
+      <Table name="dim_uf" schema="dw" alias="UF">
+      </Table>
+      <Level name="UF" visible="true" column="sg_uf" nameColumn="sg_uf" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="UF">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="CotaP" visible="true" cache="true" enabled="true">
+    <Table name="fato_cotap" schema="dw" alias="Fato_CotaP">
+    </Table>
+    <DimensionUsage source="Tempo" name="Tempo" visible="true" foreignKey="fk_tempo" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="TipoDoc" name="TipoDoc" visible="true" foreignKey="fk_tipodoc" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Beneficiario" name="Beneficiario" visible="true" foreignKey="fk_beneficiario" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Especificacao" name="Especificacao" visible="true" foreignKey="fk_especificacao" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Parlamentar" name="Parlamentar" visible="true" foreignKey="fk_parlamentar" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Partido" name="Partido" visible="true" foreignKey="fk_partido" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Passageiro" name="Passageiro" visible="true" foreignKey="fk_passageiro" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="SubCota" name="SubCota" visible="true" foreignKey="fk_subcota" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Trecho" name="Trecho" visible="true" foreignKey="fk_trecho" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="UF" name="UF" visible="true" foreignKey="fk_uf" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="VL_Documento" column="vl_documento" datatype="Integer" aggregator="sum" caption="VL_Documento" visible="true">
+    </Measure>
+    <Measure name="VL_Glosa" column="vl_glosa" datatype="Integer" aggregator="sum" caption="VL_Glosa" visible="true">
+    </Measure>
+    <Measure name="VL_Liquido" column="vl_liquido" datatype="Integer" aggregator="sum" caption="VL_Liquido" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

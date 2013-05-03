@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="LiquidoMensalQuery" type="mondrian.jndi">
+         <Catalog>/CotaParlamentar/SchemaCotaP.xml</Catalog>
+         <Jndi>dw_cotap</Jndi>
+      </Connection>
+      <Connection id="PieDocQuery" type="mondrian.jndi">
+         <Catalog>/CotaParlamentar/SchemaCotaP.xml</Catalog>
+         <Jndi>dw_cotap</Jndi>
+      </Connection>
+      <Connection id="PartidoQuery" type="mondrian.jndi">
+         <Catalog>/CotaParlamentar/SchemaCotaP.xml</Catalog>
+         <Jndi>dw_cotap</Jndi>
+      </Connection>
+      <Connection id="EstadoQuery" type="mondrian.jndi">
+         <Catalog>/CotaParlamentar/SchemaCotaP.xml</Catalog>
+         <Jndi>dw_cotap</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="LiquidoMensalQuery"
+               id="LiquidoMensalQuery"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="EstadoParameter" type="String"/>
+      </Parameters>
+      <Query>select NON EMPTY({Descendants([Tempo].[Todos] ,[Tempo].[Ano_Mes])}) on ROWS, 
+ NON EMPTY({[Measures].[VL_Liquido]}) on Columns 
+ from [CotaP]
+ where [UF].${EstadoParameter}</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="PieDocQuery"
+               id="PieDocQuery"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="EstadoParameter" type="String"/>
+      </Parameters>
+      <Query>select NON EMPTY({Descendants([TipoDoc].[Todos] ,[TipoDoc].[TipoDoc])}) on ROWS, 
+ NON EMPTY({[Measures].[VL_Documento]}) on Columns 
+ from [CotaP]
+where [UF].${EstadoParameter}</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="PartidoQuery"
+               id="PartidoQuery"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="EstadoParameter" type="String"/>
+      </Parameters>
+      <Query>select NON EMPTY({Descendants([Partido].[Todos] ,[Partido].[Partido])}) on ROWS, 
+ NON EMPTY({[Measures].[VL_Liquido]}) on Columns 
+ from [CotaP]
+where [UF].${EstadoParameter}</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="EstadoQuery"
+               id="EstadoQuery"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Columns/>
+      <Output indexes="1,0" mode="include"/>
+      <Parameters>
+         <Parameter default="" name="EstadoParameter" type="String"/>
+      </Parameters>
+      <Query>with member [Measures].[Name] as '[UF].CurrentMember.UniqueName' select TopCount( filter({Descendants([UF].[Todos] ,[UF].[UF])}, not isempty(([UF].CurrentMember)) ) , 50) on ROWS, 
+ {[Measures].[Name]} on Columns 
+ from [CotaP]</Query>
+   </DataAccess>
+</CDADescriptor>
