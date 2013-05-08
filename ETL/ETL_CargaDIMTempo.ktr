@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>ETL_CargaDIMTempo</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#47;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>1000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>5000</feedback_size>
+    <using_thread_priorities>N</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit/>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user/>
+  <created_date>2011&#47;12&#47;19 10:45:48.102</created_date>
+  <modified_user>admin</modified_user>
+  <modified_date>2013&#47;04&#47;09 17:23:47.981</modified_date>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Essa dimensão tempo foi retirada do site abaixo:
+
+http:&#47;&#47;rpbouman.blogspot.com&#47;2007&#47;04&#47;kettle-tip-using-java-locales-for-date.html</note>
+      <xloc>193</xloc>
+      <yloc>47</yloc>
+      <width>540</width>
+      <heigth>64</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>dw_cotap</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>dw_cotap</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f28aaa0aa6798cc2fe8b</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>procon</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>it4biz_services</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aca8797bf18a0778cc2ff82</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Day Sequence</from><to>Calculate Dimension Attributes</to><enabled>N</enabled> </hop>  <hop> <from>Calculate Dimension Attributes</from><to>Select values</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>Insert &#47; Update</to><enabled>Y</enabled> </hop>  <hop> <from>GERAR 20 ANOS</from><to>Day Sequence</to><enabled>Y</enabled> </hop>  </order>
+  <step>
+    <name>Calculate Dimension Attributes</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>Y</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#47;&#47;Create a Locale according to the specified language code
+var locale = new java.util.Locale(
+    language_code.getString()
+,   country_code.getString()
+);
+
+&#47;&#47;Create a calendar, use the specified initial date
+var calendar = new java.util.GregorianCalendar(locale);
+calendar.setTime(initial_date.getDate());
+
+&#47;&#47;set the calendar to the current date by adding DaySequence days
+calendar.add(calendar.DAY_OF_MONTH,DaySequence.getInteger() - 1);
+
+&#47;&#47;get the calendar date
+var date = new java.util.Date(calendar.getTimeInMillis());
+&#47;&#47;en-us example: 9&#47;3&#47;07
+var date_short  = java.text.DateFormat.getDateInstance(
+                      java.text.DateFormat.SHORT
+                  ,   locale
+                  ).format(date);
+&#47;&#47;en-us example: Sep 3, 2007 
+var date_medium = java.text.DateFormat.getDateInstance(
+                      java.text.DateFormat.MEDIUM
+                  ,   locale
+                  ).format(date);
+&#47;&#47;en-us example: September 3, 2007
+var date_long   = java.text.DateFormat.getDateInstance(
+                      java.text.DateFormat.LONG
+                  ,   locale
+                  ).format(date);
+&#47;&#47;en-us example: Monday, September 3, 2007
+var date_full   = java.text.DateFormat.getDateInstance(
+                      java.text.DateFormat.FULL
+                  ,   locale
+                  ).format(date);
+
+&#47;&#47;day in year: 1..366
+var simpleDateFormat   = java.text.SimpleDateFormat(&quot;DD&quot;,locale);
+var day_in_year        = simpleDateFormat.format(date);
+&#47;&#47;day in month: 1..31
+simpleDateFormat.applyPattern(&quot;dd&quot;);
+var day_in_month       = simpleDateFormat.format(date);
+&#47;&#47;en-us example: &quot;Monday&quot;
+simpleDateFormat.applyPattern(&quot;EEEE&quot;);
+var day_name           = simpleDateFormat.format(date);
+&#47;&#47;en-us example: &quot;Mon&quot;
+simpleDateFormat.applyPattern(&quot;E&quot;);
+var day_abbreviation   = simpleDateFormat.format(date);
+&#47;&#47;week in year, 1..53
+simpleDateFormat.applyPattern(&quot;ww&quot;);
+var week_in_year       = simpleDateFormat.format(date);
+&#47;&#47;week in month, 1..5
+simpleDateFormat.applyPattern(&quot;W&quot;);
+var week_in_month      = simpleDateFormat.format(date);
+&#47;&#47;month number in year, 1..12
+simpleDateFormat.applyPattern(&quot;MM&quot;);
+var month_number       = simpleDateFormat.format(date);
+&#47;&#47;en-us example: &quot;September&quot;
+simpleDateFormat.applyPattern(&quot;MMMM&quot;);
+var month_name         = simpleDateFormat.format(date);
+&#47;&#47;en-us example: &quot;Sep&quot;
+simpleDateFormat.applyPattern(&quot;MMM&quot;);
+var month_abbreviation = simpleDateFormat.format(date);
+&#47;&#47;2 digit representation of the year, example: &quot;07&quot; for 2007
+simpleDateFormat.applyPattern(&quot;y&quot;);
+var year2              = simpleDateFormat.format(date);
+&#47;&#47;4 digit representation of the year, example:  2007
+simpleDateFormat.applyPattern(&quot;yyyy&quot;);
+var year4              = simpleDateFormat.format(date);
+&#47;&#47;handling Quarters is a DIY
+var quarter_name = &quot;Trimestre &quot;;
+var quarter_number;
+switch(parseInt(month_number)){
+    case 1: case 2: case 3: quarter_number = &quot;1&quot;; break;
+    case 4: case 5: case 6: quarter_number = &quot;2&quot;; break;
+    case 7: case 8: case 9: quarter_number = &quot;3&quot;; break;
+    case 10: case 11: case 12: quarter_number = &quot;4&quot;; break;
+}
+quarter_name += quarter_number;
+
+&#47;&#47;get the local yes&#47;no values
+var yes = local_yes.getString();
+var no = local_no.getString();
+
+&#47;&#47;initialize for week calculations
+var first_day_of_week = calendar.getFirstDayOfWeek();
+var day_of_week = java.util.Calendar.DAY_OF_WEEK;
+
+&#47;&#47;find out if this is the first day of the week
+var is_first_day_in_week;
+if(first_day_of_week==calendar.get(day_of_week)){
+    is_first_day_in_week = yes;
+} else {
+    is_first_day_in_week = no;
+}
+
+&#47;&#47;calculate the next day
+calendar.add(calendar.DAY_OF_MONTH,1);
+&#47;&#47;get the next calendar date
+var next_day = new java.util.Date(calendar.getTimeInMillis());
+
+&#47;&#47;find out if this is the first day of the week
+var is_last_day_in_week;
+if(first_day_of_week==calendar.get(day_of_week)){
+    is_last_day_in_week = yes;
+} else {
+    is_last_day_in_week = no;
+}
+
+&#47;&#47;find out if this is the first day of the month
+var is_first_day_of_month;
+if(day_in_month == 1){
+    is_first_day_in_month = yes;
+} else {
+    is_first_day_in_month = no;
+}
+
+&#47;&#47;find out if this is the last day in the month
+var is_last_day_of_month;
+if(java.text.SimpleDateFormat(&quot;dd&quot;,locale).format(next_day)==1){
+    is_last_day_in_month = yes;
+} else {
+    is_last_day_in_month = no;
+}
+
+function date_format_number(n){
+	return( n &gt; 9 ? n : &apos;0&apos;+n);
+}
+
+&#47;&#47;date = year4 + &quot;-&quot; + month_number + &quot;-&quot; + day_in_month
+var year_quarter            = year4 + &quot;-&quot; + quarter_name;
+var year_month_number       = year4 + &quot;-&quot; + month_number;
+var year_month_abbreviation = year4 + &quot;-&quot; + month_abbreviation;
+var data_numerica           = date_format_number(day_in_month)+&apos;&apos;+month_number+&apos;&apos;+year4;
+</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>date</name>
+        <rename>date</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>date_short</name>
+        <rename>date_short</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>date_medium</name>
+        <rename>date_medium</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>date_long</name>
+        <rename>date_long</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>date_full</name>
+        <rename>date_full</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>day_in_year</name>
+        <rename>day_in_year</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>day_name</name>
+        <rename>day_name</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>day_abbreviation</name>
+        <rename>day_abbreviation</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>month_abbreviation</name>
+        <rename>month_abbreviation</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>month_name</name>
+        <rename>month_name</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>quarter_name</name>
+        <rename>quarter_name</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>year_quarter</name>
+        <rename>year_quarter</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>year_month_abbreviation</name>
+        <rename>year_month_abbreviation</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>is_last_day_in_month</name>
+        <rename>is_last_day_in_month</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>is_first_day_in_month</name>
+        <rename>is_first_day_in_month</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>year2</name>
+        <rename>year2</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>year4</name>
+        <rename>year4</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>day_in_month</name>
+        <rename>day_in_month</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>week_in_year</name>
+        <rename>week_in_year</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>week_in_month</name>
+        <rename>week_in_month</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>month_number</name>
+        <rename>month_number</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>quarter_number</name>
+        <rename>quarter_number</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>year_month_number</name>
+        <rename>year_month_number</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>is_last_day_in_week</name>
+        <rename>is_last_day_in_week</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>is_first_day_in_week</name>
+        <rename>is_first_day_in_week</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>data_numerica</name>
+        <rename>data_numerica</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>335</xloc>
+      <yloc>216</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Day Sequence</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <valuename>DaySequence</valuename>
+      <use_database>N</use_database>
+      <connection/>
+      <schema/>
+      <seqname>SEQ_</seqname>
+      <use_counter>Y</use_counter>
+      <counter_name/>
+      <start_at>1</start_at>
+      <increment_by>1</increment_by>
+      <max_value>9999999</max_value>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>178</xloc>
+      <yloc>221</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>GERAR 20 ANOS</name>
+    <type>RowGenerator</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>language_code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>pt</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>country_code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>BR</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>initial_date</name>
+        <type>Date</type>
+        <format>yyyy-MM-dd</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>2000-01-01</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>local_yes</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>sim</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>local_no</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>não</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <limit>7300</limit>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>103</xloc>
+      <yloc>67</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Insert &#47; Update</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_cotap</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>dw</schema>
+      <table>dim_tempo</table>
+      <key>
+        <name>sk_tempo</name>
+        <field>sk_tempo</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>data</name>
+        <field>data</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>data_curta</name>
+        <field>data_curta</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>data_media</name>
+        <field>data_media</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>data_comprida</name>
+        <field>data_comprida</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>data_completa</name>
+        <field>data_completa</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>dia_do_ano</name>
+        <field>dia_do_ano</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>nome_dia</name>
+        <field>nome_dia</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>dia_abreviado</name>
+        <field>dia_abreviado</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>mes_abreviado</name>
+        <field>mes_abreviado</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>nome_mes</name>
+        <field>nome_mes</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>nome_trimestre</name>
+        <field>nome_trimestre</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>ano_trimestre</name>
+        <field>ano_trimestre</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>ano_mes_abreviado</name>
+        <field>ano_mes_abreviado</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>e_ultimo_dia_do_mes</name>
+        <field>e_ultimo_dia_do_mes</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>e_primeiro_dia_do_mes</name>
+        <field>e_primeiro_dia_do_mes</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>ano2</name>
+        <field>ano2</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>ano4</name>
+        <field>ano4</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>dia_do_mes</name>
+        <field>dia_do_mes</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>semana_do_ano</name>
+        <field>semana_do_ano</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>semana_do_mes</name>
+        <field>semana_do_mes</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>mes_numero</name>
+        <field>mes_numero</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>trimestre_numero</name>
+        <field>trimestre_numero</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>ano_mes_numero</name>
+        <field>ano_mes_numero</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>e_ultimo_dia_da_semana</name>
+        <field>e_ultimo_dia_da_semana</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>e_primeiro_dia_da_semana</name>
+        <field>e_primeiro_dia_da_semana</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>data_numerica</name>
+        <field>data_numerica</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>sk_tempo</name>
+        <rename>sk_tempo</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>data</name>
+        <rename>data</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>data_curta</name>
+        <rename>data_curta</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>data_media</name>
+        <rename>data_media</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>data_comprida</name>
+        <rename>data_comprida</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>data_completa</name>
+        <rename>data_completa</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>dia_do_ano</name>
+        <rename>dia_do_ano</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>nome_dia</name>
+        <rename>nome_dia</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>dia_abreviado</name>
+        <rename>dia_abreviado</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>mes_abreviado</name>
+        <rename>mes_abreviado</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>nome_mes</name>
+        <rename>nome_mes</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>nome_trimestre</name>
+        <rename>nome_trimestre</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ano_trimestre</name>
+        <rename>ano_trimestre</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ano_mes_abreviado</name>
+        <rename>ano_mes_abreviado</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>e_ultimo_dia_do_mes</name>
+        <rename>e_ultimo_dia_do_mes</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>e_primeiro_dia_do_mes</name>
+        <rename>e_primeiro_dia_do_mes</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ano2</name>
+        <rename>ano2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ano4</name>
+        <rename>ano4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>dia_do_mes</name>
+        <rename>dia_do_mes</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>semana_do_ano</name>
+        <rename>semana_do_ano</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>semana_do_mes</name>
+        <rename>semana_do_mes</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>mes_numero</name>
+        <rename>mes_numero</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>trimestre_numero</name>
+        <rename>trimestre_numero</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ano_mes_numero</name>
+        <rename>ano_mes_numero</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>e_ultimo_dia_da_semana</name>
+        <rename>e_ultimo_dia_da_semana</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>e_primeiro_dia_da_semana</name>
+        <rename>e_primeiro_dia_da_semana</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>data_numerica</name>
+        <rename>data_numerica</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>498</xloc>
+      <yloc>317</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>data_numerica</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>year2</name>
+        <rename>ano2</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>year4</name>
+        <rename>ano4</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>year_month_abbreviation</name>
+        <rename>ano_mes_abreviado</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>year_month_number</name>
+        <rename>ano_mes_numero</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>year_quarter</name>
+        <rename>ano_trimestre</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>date</name>
+        <rename>data</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>date_full</name>
+        <rename>data_completa</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>date_long</name>
+        <rename>data_comprida</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>date_short</name>
+        <rename>data_curta</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>date_medium</name>
+        <rename>data_media</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>day_abbreviation</name>
+        <rename>dia_abreviado</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>day_in_year</name>
+        <rename>dia_do_ano</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>day_in_month</name>
+        <rename>dia_do_mes</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>is_first_day_in_week</name>
+        <rename>e_primeiro_dia_da_semana</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>is_first_day_in_month</name>
+        <rename>e_primeiro_dia_do_mes</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>is_last_day_in_week</name>
+        <rename>e_ultimo_dia_da_semana</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>is_last_day_in_month</name>
+        <rename>e_ultimo_dia_do_mes</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>DaySequence</name>
+        <rename>sk_tempo</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>month_abbreviation</name>
+        <rename>mes_abreviado</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>month_number</name>
+        <rename>mes_numero</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>day_name</name>
+        <rename>nome_dia</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>month_name</name>
+        <rename>nome_mes</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>quarter_name</name>
+        <rename>nome_trimestre</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>week_in_year</name>
+        <rename>semana_do_ano</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>week_in_month</name>
+        <rename>semana_do_mes</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>quarter_number</name>
+        <rename>trimestre_numero</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>499</xloc>
+      <yloc>215</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+</transformation>
