@@ -1,0 +1,47 @@
+﻿body
+{
+	font-family:Arial, serif;
+	font-size: 12px;
+	color: #384548;
+	background-image:url('../imagens/bandeira-do-brasil.jpg');
+	background-position:center;
+	background-size:40%;
+}
+
+.header
+{
+	background-color:green;
+	height:60px;
+	font-size:40px;
+	color:blue;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-weight:bold;
+	padding-top:10px;
+	margin-top:5px;
+}
+
+.header-filtro
+{
+	background-color:aqua;
+	height: 40px;
+}
+
+.text-filter
+{
+	margin-left:10px;
+	font-size:30px;
+	font-weight:bold;
+}
+
+.filter
+{
+	margin-left:150px;
+	text-align:left;
+	margin-top:-35px;
+	font-size:20px;
+}
+
+.grafico
+{
+	background-color:white;
+}

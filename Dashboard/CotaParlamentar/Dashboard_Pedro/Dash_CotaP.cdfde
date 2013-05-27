@@ -3,6 +3,29 @@
   "title": "Two x One Template",
   "rows": [
    {
+    "id": "81bcc454-9717-b6dd-450b-9a68f2d62788",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "style",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "${res:css/main.css}",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     }
+    ]
+   },
+   {
     "id": "e12f9bf3-27f1-beb1-0a68-a5b0facd091b",
     "type": "LayoutRow",
     "typeDesc": "Row",
@@ -89,12 +112,12 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "60"
+      "value": ""
      },
      {
       "name": "backgroundColor",
       "type": "Color",
-      "value": "#a1d200"
+      "value": ""
      },
      {
       "name": "roundCorners",
@@ -109,7 +132,7 @@
      {
       "name": "cssClass",
       "type": "String",
-      "value": ""
+      "value": "header"
      }
     ]
    },
@@ -131,13 +154,51 @@
      },
      {
       "name": "fontSize",
-      "value": "30",
+      "value": "",
       "type": "Integer"
      },
      {
       "name": "color",
       "value": "",
       "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "c65953e2-f108-0d4a-0df6-b1c7114e449d",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
      },
      {
       "name": "cssClass",
@@ -159,12 +220,12 @@
      },
      {
       "name": "height",
-      "value": "30",
+      "value": "",
       "type": "Integer"
      },
      {
       "name": "backgroundColor",
-      "value": "#998d99",
+      "value": "",
       "type": "Color"
      },
      {
@@ -179,7 +240,7 @@
      },
      {
       "name": "cssClass",
-      "value": "",
+      "value": "header-filtro",
       "type": "String"
      }
     ]
@@ -232,7 +293,7 @@
      },
      {
       "name": "height",
-      "value": "20",
+      "value": "",
       "type": "Integer"
      },
      {
@@ -242,7 +303,7 @@
      },
      {
       "name": "roundCorners",
-      "value": "",
+      "value": "cdfdd-round",
       "type": "RoundCorners"
      },
      {
@@ -252,7 +313,7 @@
      },
      {
       "name": "cssClass",
-      "value": "",
+      "value": "text-filter",
       "type": "String"
      }
     ]
@@ -275,7 +336,7 @@
      },
      {
       "name": "fontSize",
-      "value": "24",
+      "value": "",
       "type": "Integer"
      },
      {
@@ -349,6 +410,44 @@
      {
       "name": "roundCorners",
       "value": "cdfdd-round",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "filter",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0b44ec1e-4839-6a25-c067-58b7a18cde80",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "10",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
       "type": "RoundCorners"
      },
      {
@@ -508,7 +607,7 @@
      {
       "name": "cssClass",
       "type": "String",
-      "value": ""
+      "value": "grafico"
      }
     ]
    },
@@ -566,7 +665,7 @@
      {
       "name": "backgroundColor",
       "type": "Color",
-      "value": "#e0e0e0"
+      "value": ""
      },
      {
       "name": "roundCorners",
@@ -582,6 +681,44 @@
       "name": "cssClass",
       "type": "String",
       "value": ""
+     }
+    ]
+   },
+   {
+    "id": "4d3f70b6-ab4a-eef3-294f-a3336327e537",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "80ee452e-ec84-f906-5977-f16e9be4ccd4",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "10",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
      }
     ]
    },
@@ -619,7 +756,7 @@
      {
       "name": "cssClass",
       "type": "String",
-      "value": ""
+      "value": "grafico"
      }
     ]
    },
@@ -677,7 +814,7 @@
      {
       "name": "backgroundColor",
       "type": "Color",
-      "value": "#e0e0e0"
+      "value": ""
      },
      {
       "name": "roundCorners",
@@ -783,7 +920,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "440"
+      "value": "445"
      },
      {
       "name": "backgroundColor",
@@ -803,7 +940,7 @@
      {
       "name": "cssClass",
       "type": "String",
-      "value": ""
+      "value": "grafico"
      }
     ]
    },
@@ -861,7 +998,7 @@
      {
       "name": "backgroundColor",
       "type": "Color",
-      "value": "#e0e0e0"
+      "value": ""
      },
      {
       "name": "roundCorners",
@@ -877,6 +1014,44 @@
       "name": "cssClass",
       "type": "String",
       "value": ""
+     }
+    ]
+   },
+   {
+    "id": "8be9f06e-85c9-4b38-8273-e78bbee5b05b",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "10",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
      }
     ]
    },
@@ -1056,7 +1231,7 @@
      },
      {
       "name": "title",
-      "value": "LiquidoMensal",
+      "value": "Valor Liquido Mensal",
       "type": "String"
      },
      {
@@ -1115,12 +1290,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
@@ -2215,7 +2390,7 @@
      },
      {
       "name": "title",
-      "value": "Partido",
+      "value": "Valor Liquido por Partido",
       "type": "String"
      },
      {
@@ -2240,7 +2415,7 @@
      },
      {
       "name": "width",
-      "value": "430",
+      "value": "420",
       "type": "Integer"
      },
      {
@@ -2274,12 +2449,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
@@ -3339,7 +3514,7 @@
      },
      {
       "name": "title",
-      "value": "PieDoc",
+      "value": "Documentos Utilizados",
       "type": "String"
      },
      {
