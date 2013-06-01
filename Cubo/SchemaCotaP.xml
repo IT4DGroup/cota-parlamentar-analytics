@@ -130,5 +130,7 @@
     </Measure>
     <Measure name="VL_Liquido" column="vl_liquido" datatype="Integer" aggregator="sum" caption="VL_Liquido" visible="true">
     </Measure>
+    <Measure name="NU_Parcela" column="nu_parcela" datatype="Integer" aggregator="sum" caption="NU_Parcela" visible="true">
+    </Measure>
   </Cube>
 </Schema>
